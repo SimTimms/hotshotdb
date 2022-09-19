@@ -2,6 +2,8 @@ import express from 'express';
 import { main, updateMain, getMain, deleteMain } from './utils/db.mjs';
 import { Kitten } from './utils/model/index.mjs';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+iresponse;
 import {
   generateURLs,
   inputForm,
@@ -18,6 +20,7 @@ await mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection;
 
 var app = express();
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT || 80;
 const thisUrl = 'http://localhost:3000';
