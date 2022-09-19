@@ -3,7 +3,6 @@ import { main, updateMain, getMain, deleteMain } from './utils/db.mjs';
 import { Kitten } from './utils/model/index.mjs';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-iresponse;
 import {
   generateURLs,
   inputForm,
