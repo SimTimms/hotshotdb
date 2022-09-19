@@ -19,7 +19,7 @@ mongoose.connection;
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('port', process.env.PORT || 8080);
+const port = process.env.PORT || 80;
 const thisUrl = 'http://localhost:3000';
 
 app.get('/', function (req, res) {
@@ -103,6 +103,6 @@ app.delete('/:uuid/:deleteCode', async function (req, res) {
   res.send(`Deleted!`);
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Example app listening on port port!');
 });
