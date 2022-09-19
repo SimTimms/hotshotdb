@@ -16,7 +16,7 @@ export function inputForm(value) {
   return `
    <form action="/" method="POST" style="display:flex;flex-direction:column">
    <h4 style="color:#fff;margin:0px auto 10px auto;text-align:center">Enter Your Value</h4>
-   <input maxlength="100" onchange="document.getElementById(\'submitB\').title=\'dd\'" name="newItem"  value="${
+   <input maxlength="200" onchange="document.getElementById(\'submitB\').title=\'dd\'" name="newItem"  value="${
      value || ''
    }" style="padding:10px; border-radius:10px; border:none; text-align:center"/>
    <button id="submitB" style="background:#33cdcd; border:none; border-radius:10px; width:80; padding:10px 0 10px 0; margin:auto; margin-top:10px">${
@@ -29,7 +29,7 @@ export function updateForm(uuid, value) {
   return `
    <form action="/${uuid}/${value}" method="POST" style="display:flex;flex-direction:column">
    <h4 style="color:#fff;margin:0px auto 10px auto;text-align:center">Enter Your Value</h4>
-   <input  maxlength="100" onchange="document.getElementById(\'submitB\').title=\'dd\'" name="newItem"  value="${
+   <input  maxlength="200" onchange="document.getElementById(\'submitB\').title=\'dd\'" name="newItem"  value="${
      value || ''
    }" style="padding:10px; border-radius:10px; border:none; text-align:center"/>
    <input type="hidden" name="hiddenId"  value="${uuid || ''}" />

@@ -14,14 +14,14 @@ function deleteCode(length) {
 
 export async function main(value) {
   const silence = new Kitten({
-    name: value.substring(0, 100),
+    name: value.substring(0, 200),
     deleteCode: deleteCode(10),
   });
   return await silence.save();
 }
 
 export async function updateMain(uuid, value) {
-  await Kitten.updateOne({ _id: uuid }, { name: value.substring(0, 100) });
+  await Kitten.updateOne({ _id: uuid }, { name: value.substring(0, 200) });
 
   const silence = await Kitten.findOne({ _id: uuid });
   return silence;
