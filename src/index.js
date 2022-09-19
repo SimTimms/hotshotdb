@@ -77,12 +77,20 @@ app.post('/:uuid/:value', async function (req, res) {
   let uuid = '';
   value = req.body.newItem;
   uuid = req.body.hiddenId;
+  if (!uuid || !value) {
+    res.send(html(doesntExist()));
+    return;
+  }
   const record = await updateMain(uuid, value).catch((err) => console.log(err));
-  console.log(record);
 
-  res.send(
-    html(await generateURLs(record.name, record._id, record.deleteCode))
-  );
+  if (record) {
+    res.send(
+      html(await generateURLs(record.name, record._id, record.deleteCode))
+    );
+  } else {
+    res.send(html(doesntExist()));
+    return;
+  }
 });
 
 app.put('/:uuid/:value', async function (req, res) {
