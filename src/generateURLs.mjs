@@ -47,9 +47,12 @@ export function generateURLs(value, uuid, deleteCode) {
     <p style="margin:0px; color:rgba(255,255,255,0.5) !important">You won't be able to get them again</p>
     </div>
     
-     
-        <h5 style="margin:10px 0 0; color:rgba(255,255,255,0.7)">GET</h5> 
+          
+        <h5 style="margin:10px 0 0; color:rgba(255,255,255,0.7)">GUI</h5> 
         <a href="${thisUrl}/${uuid}"><h4 style="margin:0px; color:rgba(255,255,255,1) !important">${thisUrl}/${uuid}</h4></a>
+
+        <h5 style="margin:10px 0 0; color:rgba(255,255,255,0.7)">GET</h5> 
+        <a href="${thisUrl}/api/${uuid}"><h4 style="margin:0px; color:rgba(255,255,255,1) !important">${thisUrl}/api/${uuid}</h4></a>
 
         <h5 style="margin:10px 0 0; color:rgba(255,255,255,0.7)">PUT</h5> 
         <h4 style="margin:0px; color:rgba(255,255,255,1) !important">${thisUrl}/${uuid}/YOUR NEW VALUE</h4></a>

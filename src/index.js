@@ -26,6 +26,19 @@ app.get('/', function (req, res) {
   res.send(html(`${inputForm()}`));
 });
 
+app.get('/api/:uuid', async function (req, res) {
+  const { uuid } = req.params;
+  const record = await getMain(uuid).catch((err) => {
+    return null;
+  });
+
+  if (!record) {
+    res.send({ error: 'Nope' });
+    return;
+  }
+  res.send({ value: record.name, _id: record._id });
+});
+
 app.get('/update/:uuid/:value', function (req, res) {
   res.send(html(`${updateForm(req.params.uuid, req.params.value)}`));
 });
