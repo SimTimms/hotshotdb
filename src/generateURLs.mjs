@@ -46,12 +46,8 @@ export function generateURLs(value, uuid, deleteCode) {
     <h3 style="margin:0px">Save these details!</h3>
     <p style="margin:0px; color:rgba(255,255,255,0.5) !important">You won't be able to get them again</p>
     </div>
-      <h5 style="margin:0px; color:rgba(255,255,255,0.6)">KEY</h5> 
-      <h4 style="margin:0px; color:rgba(255,255,255,1) !important">${uuid}</h4>
-        <h5 style="margin:10px 0 0;  color:rgba(255,255,255,0.6)">DELETE CODE</h5> 
-      <h4 style="margin:0px; color:rgba(255,255,255,1) !important">${deleteCode}</h4>
-
-        <p style="margin:20px 0 0; color:rgba(255,255,255,0.5) !important">Your endpoints are</p>
+    
+     
         <h5 style="margin:10px 0 0; color:rgba(255,255,255,0.7)">GET</h5> 
         <a href="${thisUrl}/${uuid}"><h4 style="margin:0px; color:rgba(255,255,255,1) !important">${thisUrl}/${uuid}</h4></a>
 
